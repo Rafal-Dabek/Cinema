@@ -49,7 +49,7 @@ export const HomePage=()=>{
     
         digitsPassword? document.getElementById("digit").style.color = "green" : document.getElementById("digit").style.color = "red"; //checks if there is a digit in password 
         
-        (passwordLength>=8)? document.getElementById("charakters").style.color = "green" : document.getElementById("charakters").style.color = "red"; //checks if there are 8 characters in password 
+        (passwordLength>=8)? document.getElementById("characters").style.color = "green" : document.getElementById("characters").style.color = "red"; //checks if there are 8 characters in password 
         
         lettersPassword? document.getElementById("letter").style.color = "green" : document.getElementById("letter").style.color = "red";//checks if there is a letter in password 
     }
@@ -113,7 +113,7 @@ const onChange=(e)=>{
                          />
 
                     ))}
-                    <p className='helper' id='charakters'>At least 8 characters</p>
+                    <p className='helper' id='characters'>At least 8 characters</p>
                     <p className='helper' id='letter'>At least one letter</p>
                     <p className='helper' id='digit'>At least one digit</p>
                     <button onClick={togglePassword} id="passwordButton">Show Password</button>

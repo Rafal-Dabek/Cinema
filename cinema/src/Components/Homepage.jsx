@@ -70,7 +70,8 @@ const inputs=[
         name:"password",
         type:"password",
         placeholder:"Enter your password",
-        label:"Password"
+        label:"Password",
+        required:true,
     }
 ]
 

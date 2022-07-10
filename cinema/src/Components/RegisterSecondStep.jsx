@@ -25,7 +25,8 @@ const inputs=[
         name:"first_name",
         type:"text",
         placeholder:"e.g. Jessica",
-        label:"First name"
+        label:"First name",
+        required:true,
     },
     {
         id:2,
@@ -39,7 +40,8 @@ const inputs=[
         name:"date_of_birth",
         type:"date",
         placeholder:"DD / MM / YYYY",
-        label:"Date of birth"
+        label:"Date of birth",
+        required:true,
     }
 ]
 function getAge(dateString) {//checks the age of a person
@@ -84,7 +86,7 @@ const onChange=(e)=>{
                          />
 
                     ))}
-                    <p id="over18yo" className='helper'>You should be minium 18 years old</p>
+                    <p id="over18yo" className='helper'>You should be minimum 18 years old</p>
                     <span id="privacyPolicy"><input type="checkbox" id="privacyPolicyCheckbox" required />
                     <label for="checkbox" id="privacyPolicyLabel"  > I accept <a id="privacyPolicyLink" href='#'>Privacy Policy</a></label></span>
                     <br></br>

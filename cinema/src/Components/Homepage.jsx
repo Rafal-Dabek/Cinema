@@ -30,7 +30,8 @@ export const HomePage=()=>{
        
         if(e.target.name==="mail"){//checks if mail is correct
             if(/\S+@monterail.com/.test(e.target.value)){
-                setMailValid(!mailValid);//should work
+                setMailValid(!mailValid);
+                
         }    
       }
       if(e.target.name==="password"){//checks if password is correct
@@ -43,7 +44,9 @@ export const HomePage=()=>{
         const digitsPassword =  digitsTest.test(passwordInputValue);
         const lettersPassword =  lettersTest .test(passwordInputValue);
         if((passwordLength>=8 )&& digitsPassword &&lettersPassword ) {
-            setPasswordValid(!passwordValid);
+            console.log(passwordValid)
+            setPasswordValid(!passwordValid);//should work, better fix
+            console.log("xd")
             
     }
     

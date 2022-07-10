@@ -86,7 +86,7 @@ const onChange=(e)=>{
                     ))}
                     <p id="over18yo" className='helper'>You should be minium 18 years old</p>
                     <span id="privacyPolicy"><input type="checkbox" id="privacyPolicyCheckbox" required />
-                    <label for="checkbox" id="privacyPolicyLabel"  > I accept <a id="privacyPolicyLink">Privacy Policy</a></label></span>
+                    <label for="checkbox" id="privacyPolicyLabel"  > I accept <a id="privacyPolicyLink" href='#'>Privacy Policy</a></label></span>
                     <br></br>
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>

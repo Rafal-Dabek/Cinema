@@ -12,7 +12,7 @@ export const RegisterSecondStep=()=>{
         isAnAdult:false,
     })
 
-
+    const [ageValid, setAgeValid] = useState(false);
     const location = useLocation();
 const prevdata = location.state;//prevdata from prewious page
 let data={   //date which is passed to next page
@@ -58,6 +58,8 @@ function getAge(dateString) {//checks the age of a person
 function isValid(e) {  //checks if a person is 18 or older
     if(e.target.name==="date_of_birth"){
         (getAge(e.target.value)>=18)? document.getElementById("over18yo").style.color = "green" : document.getElementById("over18yo").style.color = "red";
+        setAgeValid(!ageValid);
+        console.log(ageValid)
     }
     
 
@@ -93,7 +95,7 @@ const onChange=(e)=>{
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>
                     <Link to="/Succes" state={data}>
-                    <button className='nextStep'> Next step</button>
+                    <button className='nextStep' /*disabled={!ageValid}*/> Next step</button>
                     </Link>
                     </div>
                     

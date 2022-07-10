@@ -15,25 +15,22 @@ export const HomePage=()=>{
    
     //var passwordValid= false;
     //var mailValid= false;
-    displayButton=(mailValid&&passwordValid)
+  
     const [passwordShown, setPasswordShown] = useState(false);
     const [passwordValid, setPasswordValid] = useState(false);
-    const [mailValid, setMailValid] = useState(false);
+    const [mailValid, setMailValid] = useState(true);
     const togglePassword = () => {
         
         setPasswordShown(!passwordShown);
       };
-    
+      displayButton=(mailValid&&passwordValid)
     
       function isValid(e) {//checks if password and mail are correct
         
-        const regex = /\d/;
        
         if(e.target.name==="mail"){//checks if mail is correct
             if(/\S+@monterail.com/.test(e.target.value)){
-                
-                setMailValid(!mailValid);
-                console.log("mailValid: "+mailValid+" passwordvali: "+passwordValid+" suma: "+displayButton)
+                setMailValid(!mailValid);//should work
         }    
       }
       if(e.target.name==="password"){//checks if password is correct
@@ -46,7 +43,7 @@ export const HomePage=()=>{
         const digitsPassword =  digitsTest.test(passwordInputValue);
         const lettersPassword =  lettersTest .test(passwordInputValue);
         if((passwordLength>=8 )&& digitsPassword &&lettersPassword ) {
-            setPasswordValid(!mailValid);
+            setPasswordValid(!passwordValid);
             
     }
     
@@ -124,7 +121,7 @@ const onChange=(e)=>{
                     <button className='logIn' >Log in instead</button>
                     
                     <Link to="/SecondStep" state={values}>
-                    <button className='nextStep' type="submit"  > Next step</button>
+                    <button className='nextStep' type="submit" disabled={!passwordValid} > Next step</button> {/*is only disabled when password is incorrect */}
                     </Link>
                     </div>
                     

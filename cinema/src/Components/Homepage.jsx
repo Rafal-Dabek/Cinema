@@ -4,6 +4,8 @@ import {Link } from "react-router-dom";
 import "./style.css"
 import "./FormInput"
 import FormInput from './FormInput';
+
+
 export const HomePage=()=>{
     const [values,setValues]=useState({
         mail:"",
@@ -11,10 +13,16 @@ export const HomePage=()=>{
     })
     var displayButton=false
    
-    var passwordValid= false;
-    var mailValid= false;
+    //var passwordValid= false;
+    //var mailValid= false;
     displayButton=(mailValid&&passwordValid)
-    
+    const [passwordShown, setPasswordShown] = useState(false);
+    const [passwordValid, setPasswordValid] = useState(false);
+    const [mailValid, setMailValid] = useState(false);
+    const togglePassword = () => {
+        
+        setPasswordShown(!passwordShown);
+      };
     
     
       function isValid(e) {//checks if password and mail are correct
@@ -24,7 +32,7 @@ export const HomePage=()=>{
         if(e.target.name==="mail"){//checks if mail is correct
             if(/\S+@monterail.com/.test(e.target.value)){
                 
-                mailValid=true;
+                setMailValid(!mailValid);
                 console.log("mailValid: "+mailValid+" passwordvali: "+passwordValid+" suma: "+displayButton)
         }    
       }
@@ -38,7 +46,7 @@ export const HomePage=()=>{
         const digitsPassword =  digitsTest.test(passwordInputValue);
         const lettersPassword =  lettersTest .test(passwordInputValue);
         if((passwordLength>=8 )&& digitsPassword &&lettersPassword ) {
-            passwordValid=true
+            setPasswordValid(!mailValid);
             
     }
     
@@ -68,10 +76,11 @@ const inputs=[
     {
         id:2,
         name:"password",
-        type:"password",
+        type: passwordShown ? "text" : "password",
         placeholder:"Enter your password",
         label:"Password",
         required:true,
+        
     }
 ]
 
@@ -110,8 +119,10 @@ const onChange=(e)=>{
                     <p className='helper' id='charakters'>At least 8 characters</p>
                     <p className='helper' id='letter'>At least one letter</p>
                     <p className='helper' id='digit'>At least one digit</p>
+                    <button onClick={togglePassword} id="passwordButton">Show Password</button>
                     <div className='buttonDiv'>
-                    <button className='logIn'>Log in instead</button>
+                    <button className='logIn' >Log in instead</button>
+                    
                     <Link to="/SecondStep" state={values}>
                     <button className='nextStep' type="submit"  > Next step</button>
                     </Link>

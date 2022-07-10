@@ -13,6 +13,7 @@ export const RegisterSecondStep=()=>{
     })
 
     const [ageValid, setAgeValid] = useState(false);
+    const [checked, setChecked] = useState(false);
     const location = useLocation();
 const prevdata = location.state;//prevdata from prewious page
 let data={   //date which is passed to next page
@@ -60,9 +61,10 @@ function isValid(e) {  //checks if a person is 18 or older
         (getAge(e.target.value)>=18)? document.getElementById("over18yo").style.color = "green" : document.getElementById("over18yo").style.color = "red";
         if(!ageValid)setAgeValid(!ageValid);
         console.log(getAge(e.target.value))//add check box requirement
+        if(document.getElementById("privacyPolicyCheckbox").checked)setChecked(!checked);
     }
     
-
+    let isChecked = document.getElementById("privacyPolicyCheckbox").checked;
 }
 
 const onChange=(e)=>{
@@ -95,7 +97,7 @@ const onChange=(e)=>{
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>
                     <Link to="/Succes" state={data}>
-                    <button className='nextStep' disabled={!ageValid}> Next step</button>
+                    <button className='nextStep' disabled={!ageValid }> Next step</button>
                     </Link>
                     </div>
                     

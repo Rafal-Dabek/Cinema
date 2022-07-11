@@ -7,7 +7,7 @@ header{
     margin-top: 5px;
     padding: 10px;
     text-align: center;
-    
+    padding: 25px 48px;
 }
 span{
     width: 603px;
@@ -64,6 +64,7 @@ input:focus{
 }
 #graySentence{
     color: #606277;
+    padding-bottom: 40px;
 }
 button{
     font-family: 'Roboto Mono';
@@ -131,9 +132,10 @@ button{
     padding: 64px;
     gap: 40px;
     width: 600px;
-    height: 610px;
+    height: 460px;
     margin-left: auto;
     margin-right: auto ;
+    
 }
 .textHolder{
     margin-left: auto;
@@ -194,6 +196,9 @@ a{
     }
     #darkSentence,#graySentence{
         font-size: 40px;
+    }
+    #graySentence{
+        padding-bottom: 0px;
     }
     .textHolder{
         margin: 0 auto

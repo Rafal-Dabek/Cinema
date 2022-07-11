@@ -72,13 +72,13 @@ function isValid(e) {  //checks if a person is 18 or older
     }
     if(e.target.name==="first_name"){//checks if firstname is correct
         
-            (/^[A-Za-z]+/.test(e.target.value))? setfnameValid(true) : setfnameValid(false) 
+            (/^[A-Z][a-z0-9_-]{1,19}$/.test(e.target.value))? setfnameValid(true) : setfnameValid(false) 
             
        }
 
     if(e.target.name==="last_name"){//checks if lastname is correct
         
-            (/^[A-Za-z]+/.test(e.target.value))? setlnameValid((prevState,props)=>(  //changes the lastnameValid property
+            (/^[A-Z][a-z0-9_-]{1,19}$/.test(e.target.value))? setlnameValid((prevState,props)=>(  //changes the lastnameValid property
             {
                 value:true
             })) : setlnameValid(false) 

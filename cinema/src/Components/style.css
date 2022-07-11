@@ -195,7 +195,8 @@ a{
         text-align: center;
     }
     .buttonDiv{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        
     }
     #darkSentence,#graySentence{
         font-size: 40px;

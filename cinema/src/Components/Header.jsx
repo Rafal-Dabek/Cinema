@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link } from "react-router-dom";
-//import {data1} from './components/BasicTable';
 import logo from './logo.png';
 import love from './love.png';
 import "./style.css"

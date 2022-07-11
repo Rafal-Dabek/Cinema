@@ -30,6 +30,9 @@ height: 164px;
 input{
     width: 200px;
 }
+input:hover{
+    background: #E5E5E5;
+}
 .text{
     font-size: 18px;
 }

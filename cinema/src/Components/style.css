@@ -87,7 +87,7 @@ button{
 #Homebutton{
     
     display: flex;
-   justify-content: center;
+    justify-content: center;
 }
 .buttonDiv{
     display: flex;

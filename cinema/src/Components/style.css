@@ -110,7 +110,7 @@ button{
 .buttonDiv{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     gap: 16px;
 }

@@ -9,7 +9,6 @@ export const RegisterSecondStep=()=>{
         first_name:"",
         last_name:"",
         date_of_birth:"",
-        isAnAdult:false,
     })
 
     const [ageValid, setAgeValid] = useState(false);

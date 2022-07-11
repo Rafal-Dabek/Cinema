@@ -7,8 +7,6 @@ const FormInput=(props)=>{
     <label>{label}</label>
     <input {...inputProps} onChange={onChange}/>
 </div>
-
-
     )
 }
 export default FormInput

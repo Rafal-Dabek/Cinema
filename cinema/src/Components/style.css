@@ -29,10 +29,17 @@ height: 164px;
 }
 input{
     width: 200px;
+    border:0px
 }
 input:hover{
     background: #E5E5E5;
 }
+input:focus{
+    background: rgba(47, 128, 237, 0.1);
+    border: 1px solid #2F80ED;
+}
+
+
 .text{
     font-size: 18px;
 }

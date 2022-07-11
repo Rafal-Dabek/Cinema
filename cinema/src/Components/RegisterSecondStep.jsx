@@ -63,7 +63,8 @@ function isValid(e) {  //checks if a person is 18 or older
     
     if(e.target.name==="date_of_birth"){
         (getAge(e.target.value)>=18)? document.getElementById("over18yo").style.color = "green" : document.getElementById("over18yo").style.color = "red";
-        if(!ageValid)setAgeValid(!ageValid);  //works uncorrectly can be false and still proceed further
+        (getAge(e.target.value)>=18)? setAgeValid(true) : setAgeValid(false) //checks if age is correct
+         
         console.log("checked: "+checked)
         console.log(" agevalid: "+ageValid)
         console.log(" fname: "+fnameValid)

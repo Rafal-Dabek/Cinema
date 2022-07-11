@@ -29,7 +29,6 @@ height: 164px;
 }
 input{
     width: 200px;
-    
 }
 .text{
     font-size: 18px;
@@ -82,7 +81,15 @@ button{
 .logIn{
     color: #EC1115;
     background: #FFFFFF;
-
+}
+.nextStep:hover{
+    color:#FFFFFF ;
+    background: #A60C0E;
+}
+.nextStep:focus{
+    color:#FFFFFF ;
+    background: #A60C0E;
+    border: 5px solid #F47073;
 }
 #Homebutton{
     

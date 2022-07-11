@@ -70,7 +70,8 @@ function isValid(e) {  //checks if a person is 18 or older
 }
 
 function changeCheckerValid(){
-    if( document.getElementById("privacyPolicyCheckbox").checked&&!checked)setChecked(!checked)
+    (document.getElementById("privacyPolicyCheckbox").checked)? setChecked(true) : setChecked(false)
+    
 }
 
 

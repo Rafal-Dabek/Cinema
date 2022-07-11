@@ -36,7 +36,8 @@ const inputs=[
         name:"last_name",
         type:"text",
         placeholder:"e.g. Walton",
-        label:"Last Name"
+        label:"Last Name",
+        required:true
     },
     {
         id:3,
@@ -64,20 +65,24 @@ function isValid(e) {  //checks if a person is 18 or older
     if(e.target.name==="date_of_birth"){
         (getAge(e.target.value)>=18)? document.getElementById("over18yo").style.color = "green" : document.getElementById("over18yo").style.color = "red";
         if(!ageValid)setAgeValid(!ageValid);
-        console.log("checked: "+checked)//add check box requirement
+        console.log("checked: "+checked)
         console.log(" agevalid: "+ageValid)
+        console.log(" fname: "+fnameValid)
+        console.log(" lname: "+lnameValid)
     }
     if(e.target.name==="first_name"){//checks if firstname is correct
         if(/^[A-Za-z]+/.test(e.target.value)){
             setfnameValid(true);
+           
             
-    }   
+    }   }
 
     if(e.target.name==="last_name"){//checks if lastname is correct
-        if(/^[A-Za-z]+([\ A-Za-z]+)*/.test(e.target.value)){
+        if(/^[A-Za-z]+/.test(e.target.value)){
             setlnameValid(true);
-        }
-    } 
+            
+            
+    }   
 
 }
    
@@ -119,7 +124,7 @@ const onChange=(e)=>{
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>
                     <Link to="/Succes" state={data}>
-                    <button className='nextStep' disabled={!(ageValid &&checked)}> Next step</button>
+                    <button className='nextStep' disabled={!( checked && fnameValid && lnameValid && ageValid)}> Next step</button>
                     </Link>
                     </div>
                     

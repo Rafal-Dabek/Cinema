@@ -71,18 +71,16 @@ function isValid(e) {  //checks if a person is 18 or older
         console.log(" lname: "+lnameValid)
     }
     if(e.target.name==="first_name"){//checks if firstname is correct
-        if(/^[A-Za-z]+/.test(e.target.value)){
-            setfnameValid(true);
-           
+        
+            (/^[A-Za-z]+/.test(e.target.value))? setfnameValid(true) : setfnameValid(false) 
             
-    }   }
+       }
 
     if(e.target.name==="last_name"){//checks if lastname is correct
-        if(/^[A-Za-z]+/.test(e.target.value)){
-            setlnameValid(true);
+        
+            (/^[A-Za-z]+/.test(e.target.value))? setlnameValid(true) : setlnameValid(false) 
             
-            
-    }   
+     
 
 }
    

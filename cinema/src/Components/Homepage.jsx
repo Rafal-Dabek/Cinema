@@ -25,10 +25,9 @@ export const HomePage=()=>{
         
        
         if(e.target.name==="mail"){//checks if mail is correct
-            if(/\S+@monterail.com/.test(e.target.value)){
-                setMailValid(true);
-                
-        }    
+            (/\S+@monterail.com/.test(e.target.value))? setMailValid(true) : setMailValid(false) 
+            
+              
       }
       if(e.target.name==="password"){//checks if password is correct
         const passwordInputValue = e.target.value;
@@ -39,17 +38,27 @@ export const HomePage=()=>{
         
         const digitsPassword =  digitsTest.test(passwordInputValue);
         const lettersPassword =  lettersTest .test(passwordInputValue);
-        if((passwordLength>=8 )&& digitsPassword &&lettersPassword &&!passwordValid) {
+
+        ((passwordLength>=8 )&& digitsPassword &&lettersPassword )? 
            
             setPasswordValid((prevState,props)=>(  //changes the passwordValid property
                 {
-                    value:!passwordValid
+                    value:true
                 })
 
-            )
+            ):setPasswordValid((prevState,props)=>(  //changes the passwordValid property
+            {
+                value:false
+            })
+
+        )
             
             
-    }  // realtime password validation
+    
+
+       
+    
+    // realtime password validation
     
         digitsPassword? document.getElementById("digit").style.color = "green" : document.getElementById("digit").style.color = "red"; //checks if there is a digit in password 
         

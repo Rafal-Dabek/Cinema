@@ -57,15 +57,22 @@ function getAge(dateString) {//checks the age of a person
 }
 
 function isValid(e) {  //checks if a person is 18 or older
+   
+    
     if(e.target.name==="date_of_birth"){
         (getAge(e.target.value)>=18)? document.getElementById("over18yo").style.color = "green" : document.getElementById("over18yo").style.color = "red";
         if(!ageValid)setAgeValid(!ageValid);
-        console.log(getAge(e.target.value))//add check box requirement
-        if(document.getElementById("privacyPolicyCheckbox").checked)setChecked(!checked);
+        console.log("checked: "+checked)//add check box requirement
+        console.log(" agevalid: "+ageValid)
     }
     
-    let isChecked = document.getElementById("privacyPolicyCheckbox").checked;
+   
 }
+
+function changeCheckerValid(){
+    if( document.getElementById("privacyPolicyCheckbox").checked&&!checked)setChecked(!checked)
+}
+
 
 const onChange=(e)=>{
     setValues({...values,[e.target.name]:e.target.value})
@@ -91,13 +98,13 @@ const onChange=(e)=>{
 
                     ))}
                     <p id="over18yo" className='helper'>You should be minimum 18 years old</p>
-                    <span id="privacyPolicy"><input type="checkbox" id="privacyPolicyCheckbox" required />
+                    <span id="privacyPolicy"><input type="checkbox" id="privacyPolicyCheckbox" required onClick={changeCheckerValid} />
                     <label for="checkbox" id="privacyPolicyLabel"  > I accept <a id="privacyPolicyLink" href='#'>Privacy Policy</a></label></span>
                     <br></br>
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>
                     <Link to="/Succes" state={data}>
-                    <button className='nextStep' disabled={!ageValid }> Next step</button>
+                    <button className='nextStep' disabled={!(ageValid &&checked)}> Next step</button>
                     </Link>
                     </div>
                     

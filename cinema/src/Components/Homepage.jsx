@@ -11,26 +11,22 @@ export const HomePage=()=>{
         mail:"",
         password:"",
     })
-    var displayButton=false
-   
-    //var passwordValid= false;
-    //var mailValid= false;
-  
+    
     const [passwordShown, setPasswordShown] = useState(false);
     const [passwordValid, setPasswordValid] = useState(false);
-    const [mailValid, setMailValid] = useState(true);
+    const [mailValid, setMailValid] = useState(false);
     const togglePassword = () => {
         
         setPasswordShown(!passwordShown);
       };
-      displayButton=(mailValid&&passwordValid)
+      
     
       function isValid(e) {//checks if password and mail are correct
         
        
         if(e.target.name==="mail"){//checks if mail is correct
             if(/\S+@monterail.com/.test(e.target.value)){
-                setMailValid(!mailValid);
+                setMailValid(true);
                 
         }    
       }
@@ -43,12 +39,17 @@ export const HomePage=()=>{
         
         const digitsPassword =  digitsTest.test(passwordInputValue);
         const lettersPassword =  lettersTest .test(passwordInputValue);
-        if((passwordLength>=8 )&& digitsPassword &&lettersPassword ) {
-            console.log(passwordValid)
-            setPasswordValid(!passwordValid);//should work, better fix
-            console.log("xd")
+        if((passwordLength>=8 )&& digitsPassword &&lettersPassword &&!passwordValid) {
+           
+            setPasswordValid((prevState,props)=>(  //changes the passwordValid property
+                {
+                    value:!passwordValid
+                })
+
+            )
             
-    }
+            
+    }  // realtime password validation
     
         digitsPassword? document.getElementById("digit").style.color = "green" : document.getElementById("digit").style.color = "red"; //checks if there is a digit in password 
         
@@ -58,7 +59,7 @@ export const HomePage=()=>{
     }
     
     }
-
+    
 
    
 
@@ -119,12 +120,12 @@ const onChange=(e)=>{
                     <p className='helper' id='characters'>At least 8 characters</p>
                     <p className='helper' id='letter'>At least one letter</p>
                     <p className='helper' id='digit'>At least one digit</p>
-                    <button onClick={togglePassword} id="passwordButton">Show Password</button>
+                   {/* <button onClick={togglePassword} id="passwordButton">Show Password</button>  not working correctly*/} 
                     <div className='buttonDiv'>
                     <button className='logIn' >Log in instead</button>
                     
                     <Link to="/SecondStep" state={values}>
-                    <button className='nextStep' type="submit" disabled={!passwordValid} > Next step</button> {/*is only disabled when password is incorrect */}
+                    <button className='nextStep' type="submit" disabled={!(mailValid&&passwordValid)}  > Next step</button> {/*is only disabled when both password and mail are incorrect */}
                     </Link>
                     </div>
                     

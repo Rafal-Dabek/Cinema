@@ -78,7 +78,10 @@ function isValid(e) {  //checks if a person is 18 or older
 
     if(e.target.name==="last_name"){//checks if lastname is correct
         
-            (/^[A-Za-z]+/.test(e.target.value))? setlnameValid(true) : setlnameValid(false) 
+            (/^[A-Za-z]+/.test(e.target.value))? setlnameValid((prevState,props)=>(  //changes the lastnameValid property
+            {
+                value:true
+            })) : setlnameValid(false) 
             
      
 

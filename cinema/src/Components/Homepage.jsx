@@ -44,9 +44,8 @@ export const HomePage=()=>{
             setPasswordValid((prevState,props)=>(  //changes the passwordValid property
                 {
                     value:true
-                })
-
-            ):setPasswordValid((prevState,props)=>(  //changes the passwordValid property
+                }))
+                :setPasswordValid((prevState,props)=>(  //changes the passwordValid property
             {
                 value:false
             })

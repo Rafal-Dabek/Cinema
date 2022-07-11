@@ -15,14 +15,14 @@ input{
     
 }
 label{    
-color: #F47073;
-width: 43px;
-height: 18px;
-font-family: 'Roboto Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
-text-transform: uppercase;
-width: 100%
+    color: #F47073;
+    width: 43px;
+    height: 18px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 100%
 }

@@ -4,8 +4,8 @@ header{
     align-items: center;
     margin-left: auto;
     margin-right: auto ;
-   margin-top: 5px;
-   padding: 10px;
+    margin-top: 5px;
+    padding: 10px;
     text-align: center;
     
 }
@@ -15,15 +15,15 @@ height: 164px;
 }
 .helper{
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 170%;
-letter-spacing: 0.04em;
-color: #343541;
-padding:0px;
-text-align: center;
-margin-left: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 170%;
+    letter-spacing: 0.04em;
+    color: #343541;
+    padding:0px;
+    text-align: center;
+    margin-left: auto;
     margin-right: auto ;
 
 }
@@ -57,31 +57,31 @@ input{
     color: #606277;
 }
 button{
-font-family: 'Roboto Mono';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-letter-spacing: 0.015em;
-line-height: 100%;
-border: 0px;
-width: 228px;
-height: 56px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 40px;
-gap: 10px;
-border-radius: 64px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.015em;
+    line-height: 100%;
+    border: 0px;
+    width: 228px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+    border-radius: 64px;
 
 }
 .nextStep{
-background: #EC1115;
-color: #FFFFFF;
+    background: #EC1115;
+    color: #FFFFFF;
 }
 .logIn{
-color: #EC1115;
-background: #FFFFFF;
+    color: #EC1115;
+    background: #FFFFFF;
 
 }
 #Homebutton{
@@ -90,11 +90,11 @@ background: #FFFFFF;
    justify-content: center;
 }
 .buttonDiv{
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
 }
 
 .container{
@@ -122,8 +122,8 @@ gap: 16px;
     margin-left: auto;
     margin-right: auto ;
     width: 603px;
-height: 704px;
-padding: 64px;
+    height: 704px;
+    padding: 64px;
 }
 form{
     margin-left: auto;
@@ -142,9 +142,7 @@ a{
 }
 
 #privacyPolicyLabel{
-    
     color: #343541;
-    
 }
 #privacyPolicyLink{
     

@@ -14,6 +14,8 @@ export const RegisterSecondStep=()=>{
 
     const [ageValid, setAgeValid] = useState(false);
     const [checked, setChecked] = useState(false);
+    const [fnameValid, setfnameValid] = useState(false);
+    const [lnameValid, setlnameValid] = useState(false);
     const location = useLocation();
 const prevdata = location.state;//prevdata from prewious page
 let data={   //date which is passed to next page
@@ -65,7 +67,19 @@ function isValid(e) {  //checks if a person is 18 or older
         console.log("checked: "+checked)//add check box requirement
         console.log(" agevalid: "+ageValid)
     }
-    
+    if(e.target.name==="first_name"){//checks if firstname is correct
+        if(/^[A-Za-z]+/.test(e.target.value)){
+            setfnameValid(true);
+            
+    }   
+
+    if(e.target.name==="last_name"){//checks if lastname is correct
+        if(/^[A-Za-z]+([\ A-Za-z]+)*/.test(e.target.value)){
+            setlnameValid(true);
+        }
+    } 
+
+}
    
 }
 

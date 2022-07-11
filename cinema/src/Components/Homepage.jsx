@@ -15,8 +15,8 @@ export const HomePage=()=>{
     const [passwordShown, setPasswordShown] = useState(false);
     const [passwordValid, setPasswordValid] = useState(false);
     const [mailValid, setMailValid] = useState(false);
-    const togglePassword = () => {
-        
+    const togglePassword = (e) => {
+        e.preventDefault();
         setPasswordShown(!passwordShown);
       };
       
@@ -125,7 +125,7 @@ const onChange=(e)=>{
                     <p className='helper' id='characters'>At least 8 characters</p>
                     <p className='helper' id='letter'>At least one letter</p>
                     <p className='helper' id='digit'>At least one digit</p>
-                   {/* <button onClick={togglePassword} id="passwordButton">Show Password</button>  not working correctly*/} 
+                    <button onClick={togglePassword} id="passwordButton">Show Password</button>  
                     <div className='buttonDiv'>
                     <button className='logIn' >Log in instead</button>
                     

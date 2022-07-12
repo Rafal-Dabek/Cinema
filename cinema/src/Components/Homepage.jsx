@@ -25,12 +25,12 @@ export const HomePage=()=>{
       function isValid(e) {//checks if password and mail are correct
         
        
-        if(e.target.name==="mail"){//checks if mail is correct
+        if(e.target.id==="mail"){//checks if mail is correct
             (/\S+@monterail.com/.test(e.target.value))? setMailValid(true) : setMailValid(false) 
             
               
       }
-      if(e.target.name==="password"){//checks if password is correct
+      if(e.target.id==="password"){//checks if password is correct
         const passwordInputValue = e.target.value;
       
         const digitsTest = /\d/;
@@ -116,15 +116,28 @@ const onChange=(e)=>{
                 
                 <form>
                     <div>
-                    {inputs.map((input)=>(
+                    {/*inputs.map((input)=>(
                         <FormInput key={input.id}
                          {...input} 
                         value={values[input.name]} 
                          onChange={onChange}
                          />
 
-                    ))}
-                    <img onClick={togglePassword} id="passwordButton" src={eye}></img> 
+                    )) */}
+
+
+<div className='formInput'>
+    <label>Mail</label>
+    <input  onChange={onChange} type="email" required="true"  id="mail" placeholder="Something ending with monterail.com" />
+</div>
+<div className='formInput' id="bottomForm">
+    <label>password</label>
+    <input  onChange={onChange} type={passwordShown ? "text" : "password"} id="password"  required="true" placeholder="Enter your password" />
+    <img onClick={togglePassword} id="passwordButton" src={eye}></img> 
+</div>
+
+
+                    
                     </div>
                    
                  

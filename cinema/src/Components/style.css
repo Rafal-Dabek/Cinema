@@ -169,14 +169,20 @@ a{
 }
 #passwordButton{
     position: relative;
-  top: 38%;
-  left: 65%;
+    top: 38%;
+    left: 80%;
     height:20px;
     width: 20px;
+    margin-top: -43px;
 }
 #privacyPolicyCheckbox{
     width:15px
 }
+#bottomForm{
+    margin-bottom: 40px;
+
+}
+
 
 @media (max-width: 750px) {
     .card{

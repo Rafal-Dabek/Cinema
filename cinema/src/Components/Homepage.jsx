@@ -4,6 +4,7 @@ import {Link } from "react-router-dom";
 import "./style.css"
 import "./FormInput"
 import FormInput from './FormInput';
+import eye from './eye.svg';
 
 
 export const HomePage=()=>{
@@ -114,6 +115,7 @@ const onChange=(e)=>{
                 
                 
                 <form>
+                    <div>
                     {inputs.map((input)=>(
                         <FormInput key={input.id}
                          {...input} 
@@ -122,10 +124,14 @@ const onChange=(e)=>{
                          />
 
                     ))}
+                    <img onClick={togglePassword} id="passwordButton" src={eye}></img> 
+                    </div>
+                   
+                 
                     <p className='helper' id='characters'>At least 8 characters</p>
                     <p className='helper' id='letter'>At least one letter</p>
                     <p className='helper' id='digit'>At least one digit</p>
-                    <button onClick={togglePassword} id="passwordButton">Show Password</button>  
+                     
                     <div className='buttonDiv'>
                     <button className='logIn' >Log in instead</button>
                     

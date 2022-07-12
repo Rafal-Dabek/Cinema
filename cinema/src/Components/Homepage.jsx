@@ -95,7 +95,7 @@ const inputs=[
 
 
 const onChange=(e)=>{
-    setValues({...values,[e.target.name]:e.target.value})
+    setValues({...values,[e.target.id]:e.target.value})
     isValid(e)
    
 }

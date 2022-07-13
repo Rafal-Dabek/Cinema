@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import  { useState} from 'react';
 import {Link ,useLocation} from "react-router-dom";
 import "./style.css"
-import "./FormInput"
 export const Succes=()=>{
    
     const location = useLocation();

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import  { useState} from 'react';
 import { useLocation,Link } from 'react-router-dom';
 import "./style.css"
-import "./FormInput"
-import FormInput from './FormInput';
 export const RegisterSecondStep=()=>{
     const [values,setValues]=useState({
         first_name:"",

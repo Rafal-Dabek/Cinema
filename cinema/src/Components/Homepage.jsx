@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import  { useState} from 'react';
 import {Link } from "react-router-dom";
 import "./style.css"
-import "./FormInput"
-import FormInput from './FormInput';
 import eye from './eye.svg';
 
 

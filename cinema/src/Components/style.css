@@ -27,8 +27,33 @@ span{
 
 }
 input{
+    width: 230px;
+    border:0px;
+    padding: 15px;
+    margin: 10px 0;
+    background: #F7F7F7;
+    border-radius: 8px;
+    
+}
+.formInput{
+    display: flex;
+    flex-direction: column;
     width: 200px;
-    border:0px
+    margin-left: auto;
+    margin-right: auto ;
+    
+}
+label{    
+    color: #F47073;
+    width: 43px;
+    height: 18px;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 100%
 }
 input:hover{
     background: #E5E5E5;
@@ -169,7 +194,7 @@ a{
 #passwordButton{
     position: relative;
     top: 38%;
-    left: 80%;
+    left: 95%;
     height:20px;
     width: 20px;
     margin-top: -43px;

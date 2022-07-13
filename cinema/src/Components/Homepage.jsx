@@ -128,11 +128,11 @@ const onChange=(e)=>{
 
 <div className='formInput'>
     <label>Mail</label>
-    <input  onChange={onChange} type="email" required={true}  id="mail" placeholder="Something ending with monterail.com" />
+    <input  onChange={onChange} type="email" required="true"  id="mail" placeholder="Something ending with monterail.com" />
 </div>
 <div className='formInput' id="bottomForm">
     <label>password</label>
-    <input  onChange={onChange} type={passwordShown ? "text" : "password"} id="password"  required={true}  placeholder="Enter your password" />
+    <input  onChange={onChange} type={passwordShown ? "text" : "password"} id="password"  required="true" placeholder="Enter your password" />
     <img onClick={togglePassword} id="passwordButton" src={eye}></img> 
 </div>
 

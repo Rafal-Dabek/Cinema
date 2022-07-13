@@ -82,14 +82,7 @@ const onChange=(e)=>{
                 
                 
                 <form>
-                    {/*inputs.map((input)=>(
-                        <FormInput key={input.id}
-                         {...input} 
-                        value={values[input.name]} 
-                         onChange={onChange}
-                         />
-
-                    ))*/}
+                    
 
 <div className='formInput'>
     <label>First name</label>
@@ -108,7 +101,7 @@ const onChange=(e)=>{
 
                     <p id="over18yo" className='helper'>You should be minimum 18 years old</p>
                     <span id="privacyPolicy"><input type="checkbox" id="privacyPolicyCheckbox" required onClick={changeCheckerValid} />
-                    <label for="checkbox" id="privacyPolicyLabel"  > I accept <a id="privacyPolicyLink" href='#'>Privacy Policy</a></label></span>
+                    <label htmlFor="checkbox" id="privacyPolicyLabel"  > I accept <a id="privacyPolicyLink" href='#'>Privacy Policy</a></label></span>
                     <br></br>
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>

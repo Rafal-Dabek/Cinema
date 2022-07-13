@@ -3,7 +3,6 @@ import  { useState} from 'react';
 import {Link } from "react-router-dom";
 import "./style.css"
 import "./FormInput"
-import FormInput from './FormInput';
 import eye from './eye.svg';
 
 
@@ -69,27 +68,7 @@ export const HomePage=()=>{
 
    
 
-const inputs=[
-    {
-        id:1,
-        name:"mail",
-        type:"email",
-        placeholder:"Something ending with monterail.com",
-        label:"Mail",
-        pattern:".+@monterail.com",
-        required:true,
-        
-    },
-    {
-        id:2,
-        name:"password",
-        type: passwordShown ? "text" : "password",
-        placeholder:"Enter your password",
-        label:"Password",
-        required:true,
-        
-    }
-]
+
 
 
 

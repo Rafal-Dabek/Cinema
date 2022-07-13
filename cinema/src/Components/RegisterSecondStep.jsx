@@ -118,15 +118,15 @@ const onChange=(e)=>{
 
 <div className='formInput'>
     <label>First name</label>
-    <input  onChange={onChange} type="text" required="true"  id="first_name" placeholder="e.g. Jessica" />
+    <input  onChange={onChange} type="text" required={true}   id="first_name" placeholder="e.g. Jessica" />
 </div>
 <div className='formInput' >
     <label>Last Name</label>
-    <input  onChange={onChange} type= "text"  id="last_name"  required="true" placeholder="e.g. Walton" />
+    <input  onChange={onChange} type= "text"  id="last_name"  required={true} placeholder="e.g. Walton" />
 </div>
 <div className='formInput' >
     <label>Date of birth</label>
-    <input  onChange={onChange} type= "date"  id="date_of_birth"  required="true"  />
+    <input  onChange={onChange} type= "date"  id="date_of_birth"  required={true}  />
 </div>
 
 

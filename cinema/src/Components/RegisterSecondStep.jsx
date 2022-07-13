@@ -21,32 +21,7 @@ let data={   //date which is passed to next page
   mail:prevdata.mail,
   first_name:values.first_name
 }
-const inputs=[
-    {
-        id:1,
-        name:"first_name",
-        type:"text",
-        placeholder:"e.g. Jessica",
-        label:"First name",
-        required:true,
-    },
-    {
-        id:2,
-        name:"last_name",
-        type:"text",
-        placeholder:"e.g. Walton",
-        label:"Last Name",
-        required:true
-    },
-    {
-        id:3,
-        name:"date_of_birth",
-        type:"date",
-        placeholder:"DD / MM / YYYY",
-        label:"Date of birth",
-        required:true,
-    }
-]
+
 function getAge(dateString) {//checks the age of a person
     var today = new Date();
     var birthDate = new Date(dateString);

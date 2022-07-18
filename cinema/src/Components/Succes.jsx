@@ -20,7 +20,7 @@ export const Succes=()=>{
                 
                
                     <Link to="/">
-                    <button className='nextStep' id='Homebutton' > Go to homepage</button>
+                    <button className='nextStep' id='homeButton' > Go to homepage</button>
                     </Link>
                     </div>
                     

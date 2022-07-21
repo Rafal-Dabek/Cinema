@@ -6,6 +6,7 @@
     --dark:#343541;
     --whiteInput:#E5E5E5;
     --blueBorder:#2F80ED;
+    --grayInput:#F7F7F7;
     --blueInputFocus:rgba(47, 128, 237, 0.1);
     --graySentence:#606277;
     --blackCardShadow:rgba(52, 53, 65, 0.15);
@@ -43,7 +44,7 @@ input{
     border:0px;
     padding: 15px;
     margin: 10px 0;
-    background: var(--white);
+    background: var(--grayInput);
     border-radius: 8px;
     
 }
@@ -139,7 +140,7 @@ button{
     border: 5px solid var(--redLabel);
 }
 #homeButton{
-    
+    margin: auto;
     display: flex;
     justify-content: center;
 }

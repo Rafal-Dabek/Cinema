@@ -118,7 +118,7 @@ let navigate = useNavigate();
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>
                     
-                    <button className='nextStep'  onClick={SecondStep }> Next step</button>
+                    <button className='nextStep' type='submit' onClick={SecondStep }> Next step</button>
                     
                     </div>
                     

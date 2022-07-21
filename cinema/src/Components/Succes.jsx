@@ -1,12 +1,23 @@
-import React, { Component } from 'react';
-import  { useState} from 'react';
-import {Link ,useLocation} from "react-router-dom";
+import React from 'react';
+import {useLocation,useNavigate} from "react-router-dom";
 import "./style.css"
 export const Succes=()=>{
    
     const location = useLocation();
-    const value = location.state;
     const prevdata = location.state.data;
+    let navigate = useNavigate();
+
+    const SecondStep = () => {
+      
+          
+          navigate("/");
+      
+      
+    };
+
+
+
+
     return(
         <div className='container'>
            
@@ -19,9 +30,9 @@ export const Succes=()=>{
                 </p>
                 
                
-                    <Link to="/">
-                    <button className='nextStep' id='homeButton' > Go to homepage</button>
-                    </Link>
+                    
+                    <button className='nextStep' id='homeButton' onClick={SecondStep} > Go to homepage</button>
+                    
                     </div>
                     
                

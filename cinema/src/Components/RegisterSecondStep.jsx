@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import  { useState} from 'react';
-import { useLocation,Link } from 'react-router-dom';
+import { useLocation,Link, useNavigate} from 'react-router-dom';
 import "./style.css"
 export const RegisterSecondStep=()=>{
     const [values,setValues]=useState({
@@ -14,7 +14,7 @@ export const RegisterSecondStep=()=>{
     const [fnameValid, setfnameValid] = useState(false);
     const [lnameValid, setlnameValid] = useState(false);
     const location = useLocation();
-const prevdata = location.state;//prevdata from prewious page
+const prevdata = location.state.values;//prevdata from prewious page
 let data={   //date which is passed to next page
   mail:prevdata.mail,
   first_name:values.first_name
@@ -70,6 +70,20 @@ const onChange=(e)=>{
     isValid(e)
 }
 
+let navigate = useNavigate();
+
+  const SecondStep = () => {
+    if(( checked && fnameValid && lnameValid && ageValid)){
+        
+        navigate("/Succes",{state:{data}});
+    }
+    
+  };
+
+
+
+
+
     
     return(
         <div className='container'>
@@ -103,9 +117,9 @@ const onChange=(e)=>{
                     <br></br>
                     <div className='buttonDiv'>
                     <button className='logIn'>Log in instead</button>
-                    <Link to="/Succes" state={data}>
-                    <button className='nextStep' disabled={!( checked && fnameValid && lnameValid && ageValid)}> Next step</button>
-                    </Link>
+                    
+                    <button className='nextStep'  onClick={SecondStep }> Next step</button>
+                    
                     </div>
                     
                 </form>

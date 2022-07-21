@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import  { useState} from 'react';
-import {Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./style.css"
 import eye from './eye.svg';
 
@@ -79,6 +79,18 @@ const onChange=(e)=>{
 }
 
 
+let navigate = useNavigate();
+
+  const SecondStep = () => {
+    if(mailValid&&passwordValid){
+        console.log(values)
+        navigate("/SecondStep",{state:{values}});
+    }
+    
+  };
+
+
+
 
    
     return(
@@ -119,9 +131,11 @@ const onChange=(e)=>{
                     <div className='buttonDiv'>
                     <button className='logIn' >Log in instead</button>
                     
-                    <Link to="/SecondStep" state={values}>
-                    <button className='nextStep' type="submit" disabled={!(mailValid&&passwordValid)}  > Next step</button> {/*is only disabled when both password and mail are incorrect */}
-                    </Link>
+                    
+                    <button className='nextStep' type="submit"   
+                    onClick={SecondStep }
+                    > Next step</button> {/*is only disabled when both password and mail are incorrect */}
+                    
                     </div>
                     
                 </form>

@@ -5,16 +5,16 @@ import "./style.css"
 export const Succes=()=>{
    
     const location = useLocation();
-    const data = location.state;
- 
+    const value = location.state;
+    const prevdata = location.state.data;
     return(
         <div className='container'>
            
-           <p id='graySentence'>Good job {data.first_name}!</p> 
+           <p id='graySentence'>Good job {prevdata.first_name}!</p> 
             <div className='card' id='card'>
                 
                 <p className='text'>We have sent you an email to &nbsp; 
-                    <b>{data.mail}.</b>&nbsp; <br></br>
+                    <b>{prevdata.mail}.</b>&nbsp; <br></br>
                         Make sure to click the link from the message to activate your account. 
                 </p>
                 

@@ -1,4 +1,3 @@
-import './App.css';
 import {Header} from "./Components/Header"
 import {HomePage} from "./Components/Homepage"
 import {RegisterSecondStep} from "./Components/RegisterSecondStep"

@@ -1,3 +1,15 @@
+:root {
+    --redButton: #EC1115;
+    --redLabel: #F47073;
+    --white: #ffffff;
+    --redButtonHover:#A60C0E;
+    --dark:#343541;
+    --whiteInput:#E5E5E5;
+    --blueBorder:#2F80ED;
+    --blueInputFocus:rgba(47, 128, 237, 0.1);
+    --graySentence:#606277;
+    --blackCardShadow:rgba(52, 53, 65, 0.15);
+  }
 header{
     display: flex;
     justify-content: space-between;
@@ -19,7 +31,7 @@ span{
     font-size: 14px;
     line-height: 170%;
     letter-spacing: 0.04em;
-    color: #343541;
+    color: var(--dark);
     padding:0px;
     text-align: center;
     margin-left: auto;
@@ -31,7 +43,7 @@ input{
     border:0px;
     padding: 15px;
     margin: 10px 0;
-    background: #F7F7F7;
+    background: var(--white);
     border-radius: 8px;
     
 }
@@ -44,7 +56,7 @@ input{
     
 }
 label{    
-    color: #F47073;
+    color: var(--redLabel);
     width: 43px;
     height: 18px;
     font-family: 'Roboto Mono';
@@ -56,11 +68,11 @@ label{
     width: 100%
 }
 input:hover{
-    background: #E5E5E5;
+    background: var(--whiteInput);
 }
 input:focus{
-    background: rgba(47, 128, 237, 0.1);
-    border: 1px solid #2F80ED;
+    background: var(--blueInputFocus);
+    border: 1px solid var(--blueBorder);
 }
 
 
@@ -83,11 +95,11 @@ input:focus{
     
 }
 #darkSentence{
-    color: #343541;
+    color: var(--dark);
     
 }
 #graySentence{
-    color: #606277;
+    color: var(--graySentence);
     padding-bottom: 40px;
 }
 button{
@@ -110,21 +122,21 @@ button{
 
 }
 .nextStep{
-    background: #EC1115;
-    color: #FFFFFF;
+    background:var(--redButton) ;
+    color: var(--white);
 }
 .logIn{
-    color: #EC1115;
-    background: #FFFFFF;
+    color: var(--redButton);
+    background: var(--white);
 }
 .nextStep:hover{
-    color:#FFFFFF ;
-    background: #A60C0E;
+    color:var(--white) ;
+    background: var(--redButtonHover);
 }
 .nextStep:focus{
-    color:#FFFFFF ;
-    background: #A60C0E;
-    border: 5px solid #F47073;
+    color:var(--white) ;
+    background: var(--redButtonHover);
+    border: 5px solid var(--redLabel);
 }
 #homeButton{
     
@@ -148,7 +160,7 @@ button{
     width: max-content;
 }
 .card{
-    box-shadow: 0px 4px 22px rgba(52, 53, 65, 0.15);
+    box-shadow: 0px 4px 22px var(--blackCardShadow);
     border-radius: 24px;
     display: flex;
     flex-direction: column;
@@ -185,7 +197,7 @@ a{
 }
 
 #privacyPolicyLabel{
-    color: #343541;
+    color: var(--dark);
 }
 #privacyPolicyLink{
     

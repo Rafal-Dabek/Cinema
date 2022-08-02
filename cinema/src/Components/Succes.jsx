@@ -1,5 +1,5 @@
 import React from 'react';
-import {useLocation,useNavigate} from "react-router-dom";
+import {Link ,useLocation,useNavigate} from "react-router-dom";
 import "./style.css"
 export const Succes=()=>{
    

@@ -116,7 +116,7 @@ let navigate = useNavigate();
 <div className='formInput' id="bottomForm">
     <label>password</label>
     <input  onChange={onChange} type={passwordShown ? "text" : "password"} id="password"  required={true}  placeholder="Enter your password" />
-    <img onClick={togglePassword} id="passwordButton" src={eye}></img> 
+    <img onClick={togglePassword} id="passwordButton" src={eye} alt=""></img> 
 </div>
 
 

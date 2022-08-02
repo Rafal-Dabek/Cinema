@@ -9,7 +9,7 @@ export const Header=()=>{
             
                     <img src={logo} id="logo" alt="Monterail Logo"></img>
                     <p id='love'></p>
-                    <img src={love} id="love"></img>
+                    <img src={love} id="love" alt='Developed with love by monterail'></img>
         </header>
     )
 }
